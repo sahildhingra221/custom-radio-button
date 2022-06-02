@@ -8,11 +8,42 @@
 </head>
 <body>
     <style>
+        body{
+            background-color: #000;
+        }
+        .radio-wrapper{
+            background-color:#fff;
+            max-width: 700px;
+            margin:0 auto;
+            padding:20px 10px;
+        }
         .show{
+            visibility:hidden;
+            margin-left: auto;
+        }
+        .show-img{
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .show-img svg{
+            fill:red;
+        }
+        .custom-radio-button input{
             display:none;
         }
         .custom-radio-button input:checked + label .show{
-            display: block;
+            visibility: visible;
+        }
+        .custom-radio-button input:checked + label{
+            color: red;
+        }
+        .custom-radio-button label{
+            display:flex;
+            padding:10px 30px;
+            align-items: center;
         }
     </style>
     
@@ -23,7 +54,9 @@
             <label for="radioBtn1">
                 Radio 1
                 <div class="show">
-                    Checked 1
+                    <div class="show-img">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21 6.285l-11.16 12.733-6.84-6.018 1.319-1.49 5.341 4.686 9.865-11.196 1.475 1.285z"/></svg>
+                    </div>
                 </div>
             </label>
         </div>
@@ -32,7 +65,9 @@
             <label for="radioBtn2">
                 Radio 2
                 <div class="show">
-                    Checked 2
+                    <div class="show-img">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21 6.285l-11.16 12.733-6.84-6.018 1.319-1.49 5.341 4.686 9.865-11.196 1.475 1.285z"/></svg>
+                    </div>
                 </div>
             </label>
         </div>
